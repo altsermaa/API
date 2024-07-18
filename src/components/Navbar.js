@@ -50,6 +50,7 @@ function Navbar() {
       <div onClick={handleDrawer} className='lg:hidden inline'>
         <MdOutlineMenu />
       </div>
+
       <Drawer isOpen={isDrawerOpen} closeDrawer={handleDrawer} />
     </div>
   )
