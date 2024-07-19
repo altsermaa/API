@@ -7,7 +7,6 @@ function ContactPage() {
 
   return (
     <div>
-        <Navbar />
 
         <div className='mt-24 mx-auto lg:w-[895px] px-20'>
             <div className='pt-3.5 pb-4 px-auto'>
@@ -39,7 +38,6 @@ function ContactPage() {
             </div>
         </div>
 
-        <Footer />
         
     </div>
   )

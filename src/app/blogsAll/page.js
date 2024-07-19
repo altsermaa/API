@@ -41,7 +41,6 @@ function BlogsPage() {
 
     return (
         <div>
-            <Navbar />
 
             <div>
                 <div className="flex flex-col gap-8 lg:w-[1100px] m-auto py-8">
@@ -69,8 +68,6 @@ function BlogsPage() {
                 </button>
 
             </div>
-
-            <Footer />
 
         </div>
     )

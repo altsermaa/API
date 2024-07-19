@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import { MdOutlineMenu } from "react-icons/md";
 import { MdQuestionMark } from "react-icons/md";
@@ -25,7 +27,7 @@ function Navbar() {
         <img src='/Logo.png' style={{width: '135px', marginRight: '118px'}} alt='Logo' />
       </Link>
       <div className='hidden lg:flex lg:w-full lg:justify-between lg:items-center'>
-        <div className='flex w-[667px] justify-center gap-10'>
+        <div className='flex w-[667px] justify-center gap-10 text-[#393b47]'>
           <Link href={`/`}>
             <p>Home</p> 
           </Link>
