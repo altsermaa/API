@@ -44,7 +44,7 @@ function Slider() {
       <div className='flex justify-center'>
         {blogs.map((arr, index) => {
           return (
-            <div className={`flex flex-col ${index === currentSlide ? '' : 'hidden'}`}>
+            <div key={arr.id} className={`flex flex-col ${index === currentSlide ? '' : 'hidden'}`}>
               <div className='relative flex '>
                 <img src={arr.cover_image} style={{ height: '600px', width: 'auto', objectFit: 'cover', zIndex: '0', position: 'relative' }} />
                 <div className='inset-x-2 bottom-1.5 absolute z-20 w-fit h-[341] bg-white bg-opacity-75 border rounded p-10 flex flex-col gap-4'>

@@ -11,7 +11,7 @@ const NotFound= ()=> {
       </div>
       <div className='my-4 ml-14'>
         <h1 className='mt-2 font-bold'>Page Not Found</h1>
-        <p className='my-5'>We're sorry, This page is unknown or does <br></br>not exist the page you are looking for.</p>
+        <p className='my-5'>We are sorry, This page is unknown or does <br></br>not exist the page you are looking for.</p>
         <Link href={`/`}>
           <button className='bg-[#4b6afc] px-4 py-2.5 text-white rounded-md'>Back to Home</button>
         </Link>
