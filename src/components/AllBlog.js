@@ -47,13 +47,12 @@ function AllBlog() {
         getData();
     }, [category, perPage]);
 
-
     return (
         <div>
-            <div className="flex flex-col gap-8 lg:w-[1100px] m-auto py-8">
+            <div className="flex flex-col gap-8 lg:w-[1100px] w-full py-8 pl-4 lg:m-auto">
                 <h1 className='font-bold text-2xl'>All Blog Post</h1>
 
-                <div className='flex gap-5'>
+                <div className='flex gap-5 flex-wrap '>
                     {categories.map((item) => (
                         <button
                             key={item}
@@ -87,7 +86,7 @@ function AllBlog() {
             <button
                 className='mb-8 mt-24 mx-auto w-[200px] py-2 bg-white text-[#6b6977] rounded-md border border-[#6b6977]'
                 onClick={handleLoadMore}
-                style={{ display: 'block'}}
+                style={{ display: 'block' }}
             >
                 {loading ? <p>Loading ...</p> : <p>Load more</p>}
             </button>
