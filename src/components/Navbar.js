@@ -9,7 +9,7 @@ import { Drawer } from './Drawer';
 
 function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [activeLink, setActiveLink] = useState('');
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
 
@@ -21,6 +21,10 @@ function Navbar() {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <div className='flex flex-row p-5 items-center lg:w-[1100px] m-auto'>
       <Link href={`/`}>
@@ -29,13 +33,19 @@ function Navbar() {
       <div className='hidden lg:flex lg:w-full lg:justify-between lg:items-center'>
         <div className='flex w-[667px] justify-center gap-10 text-[#393b47]'>
           <Link href={`/`}>
-            <p>Home</p> 
+            <p style={{ color: activeLink === 'home' ? '#4B6BFB' : '' }} onClick={() => handleLinkClick('home')}>
+              Home
+              </p> 
           </Link>
           <Link href={`/blogsAll`}>
-            <p>Blog</p>
+            <p style={{ color: activeLink === 'blog' ? '#4B6BFB' : '' }} onClick={() => handleLinkClick('blog')}>
+              Blog
+              </p>
           </Link>
           <Link href={`/contact`}>
-            <p>Contact</p>
+            <p style={{ color: activeLink === 'contact' ? '#4B6BFB' : '' }} onClick={() => handleLinkClick('contact')}>
+              Contact
+              </p>
           </Link>
         </div>
         <div className='flex items-center bg-[#fcf9fa] p-2 rounded-md'>
